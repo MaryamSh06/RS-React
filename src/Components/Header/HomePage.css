@@ -11,21 +11,16 @@
     color: white; /* Set the text color */
   }
   
-  /* Style for the right content */
-  .content {
-    flex-grow: 1; /* Allow the content to grow and take the available space */
-    padding: 20px; /* Add padding for better appearance */
-  }
+  /* Style for the right content
+  */ 
   
   /* Center the child div inside the content area */
-  .parent {
+  /* .parent {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100%; /* Make it take the full height of the content area */
-  }
   
-  .child {
-    text-align: center;
-  }
+  
+  
   

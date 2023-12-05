@@ -32,10 +32,10 @@ function Sidebars() {
   };
 
   return (
-    <div>
+    <div >
       <Sidebar
         className={`app ${toggled ? "toggled" : ""}`}
-        style={{ height: "100%", position: "absolute" }}
+        style={{ height: "100vh", position: "fixed", overflowY:"auto" }}
         collapsed={collapsed}
         toggled={toggled}
         handleToggleSidebar={handleToggleSidebar}
