@@ -123,13 +123,18 @@ const customStyles = {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
+  const [show1, setShow1] = useState(false);
+
+  const handleClose1 = () => setShow1(false);
+  const handleShow1 = () => setShow1(true);
+
   return (
     <>
       <Button variant="primary" onClick={handleShow}>
         Launch demo modal
       </Button>
 
-      <Modal show={show} onHide={handleClose} animation={false} centered>
+      <Modal show={show} onHide={handleClose} animation={true} centered>
         <Modal.Header closeButton>
           <Modal.Title>Sign in</Modal.Title>
         </Modal.Header>
@@ -160,7 +165,7 @@ const customStyles = {
               </div>
             </div>
             <div className="or">--------- or ---------</div>
-            <button className="signin-btn">Sign in with your organization</button>
+            <Button variant="primary" onClick={handleShow1} className="signin-btn">Sign in with your organization</Button>
           </div>
         <Modal.Footer>
           <a>Don't have an account?</a>
@@ -170,6 +175,32 @@ const customStyles = {
           </Button>
           <Button variant="primary" onClick={handleClose}>
             Sign in
+          </Button>
+          </div>
+        </Modal.Footer>
+      </Modal>
+      <Modal show={show1} onHide={handleClose1} animation={true} centered>
+        <Modal.Header closeButton>
+          <Modal.Title>Sign in: Organization identifier</Modal.Title>
+        </Modal.Header>
+          <div className="content-container">
+            <div className="signin-heading">
+              <span>Please provide your organization's OIDC indetifier - contact your system administrator for more information</span>
+            </div>
+            <div >
+              <div className="fields-wrapper">
+                <input type="text" placeholder="e.g user@exmaple.com" />
+              </div>
+            </div>
+          </div>
+        <Modal.Footer>
+          <span></span>
+          <div>
+          <Button variant="secondary" onClick={handleClose1}>
+            Close
+          </Button>
+          <Button variant="primary" onClick={handleClose1}>
+            OK
           </Button>
           </div>
         </Modal.Footer>
