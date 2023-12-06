@@ -1,7 +1,6 @@
-/* HomePage.css */
 
 .home-page {
-    display: flex; /* Use flexbox for layout */
+    display: flex; 
   }
 
   /* Style for the left sidebar */

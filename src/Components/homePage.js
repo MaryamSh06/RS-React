@@ -14,14 +14,24 @@ import { IoMdEyeOff } from "react-icons/io";
 
 const customStyles = {
   content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    color:"red",
-    background:"black"
+    top: "50%",
+    left: "50%",
+    width: "600px",
+    right: "auto",
+    height: "80vh",
+    overflowY: "auto",
+    bottom: "auto",
+    marginRight: "-50%",
+    transform: "translate(-50%, -50%)",
+    backgroundColor: "lightgrey", // Set the background color to black
+    padding: "0px", // Adjust the padding
+    borderRadius:"10px"
+  },
+  overlay: {
+    // Add overlay background color
+    // display: 'flex',
+    // alignItems: 'center',
+    // justifyContent: 'center',
   },
 };
 
