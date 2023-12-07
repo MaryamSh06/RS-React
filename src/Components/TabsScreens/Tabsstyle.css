@@ -1,0 +1,144 @@
+.form-control {
+  border-radius: 0;
+  box-shadow: none;
+ 
+}
+.label-input-class{
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  margin-bottom: 14px;
+}
+.label-input-dropdown{
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.label-input-dropdown label {
+  font-size: 12px;
+  font-weight: normal;
+}
+.simple-input {
+  border: 0.5px solid #ccc; 
+  box-shadow: none;
+  padding: 5px;
+}
+
+.label-input-class label {
+  font-size: 12px;
+  font-weight: normal;
+}
+
+.border-container {
+  position: relative;
+  border: 0.2px solid #a5a5a5;
+  padding: 20px; 
+  width: 99%; 
+  margin-bottom: 18px;
+ 
+}
+
+.bottom-container{
+  position: relative;
+  border: 0.2px solid #a5a5a5;
+  padding: 20px; 
+  width: 99%; 
+ 
+}
+.border-label {
+  position: absolute;
+  top: -10px; 
+  left: 10px; 
+  background-color: lightgray; 
+  padding: 0 5px; 
+  font-size: 13px; 
+  font-weight: 300;
+}
+  .inside-border-paragraph{
+  font-size: 13px;
+  font-weight: 350;
+} 
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+/* Style for the checkbox */
+.custom-checkbox {
+  margin-right: 8px;
+}
+.custom-checkbox:checked {
+  background-color: #fff !important;
+}
+
+
+/* Style for the label */
+.label-text {
+  font-size: 12px;
+}
+
+
+select {
+  -webkit-appearance:none;
+  -moz-appearance:none;
+  -ms-appearance:none;
+  appearance:none;
+  outline:0;
+  box-shadow:none;
+  border:0!important;
+  /* background: #5c6664; */
+  background: #fff;
+  flex: 1;
+  padding: 0 .5em;
+  color:black;
+  cursor:pointer;
+  font-size: 12px;
+  font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+  display: none;
+}
+.select {
+  position: relative;
+  display: flex;
+  width: 20em;
+  /* height: 1.5em; */
+  height: 24px;
+  /* line-height: 3; */
+  line-height: 25px;
+  /* background: #5c6664; */
+  overflow: hidden;
+  border-radius: .21em;
+}
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background-color:#bdbdbd;
+  cursor:pointer;
+  pointer-events:none;
+  transition:.25s all ease;
+  
+}
+.select:hover::after {
+  /* color: #23b499; */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

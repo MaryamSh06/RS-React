@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Header/HomePage.css";
 import { LiaDesktopSolid } from "react-icons/lia";
+<<<<<<< HEAD
 // import Modal from 'react-modal';
 import Sidebars from "./Header/Sidebar";
 // import { useState } from 'react';
@@ -11,20 +12,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { FaUser } from "react-icons/fa6";
 import { CiCircleQuestion } from "react-icons/ci";
 import { IoMdEyeOff } from "react-icons/io";
+=======
+>>>>>>>  Modifying the new connection module into react-bootstrap instead of html css
 
-const customStyles = {
-  content: {
-    top: '50%',
-    left: '50%',
-    right: 'auto',
-    bottom: 'auto',
-    marginRight: '-50%',
-    transform: 'translate(-50%, -50%)',
-    color:"red",
-    background:"black"
-  },
-};
 
+<<<<<<< HEAD
  const HomePage = () => {
   // const [modalIsOpen, setIsOpen] = useState(false);
   // function openModal() {
@@ -127,6 +119,9 @@ const customStyles = {
 
   const handleClose1 = () => setShow1(false);
   const handleShow1 = () => setShow1(true);
+=======
+const HomePage = () => {
+>>>>>>>  Modifying the new connection module into react-bootstrap instead of html css
 
   return (
     <>
@@ -142,6 +137,7 @@ const customStyles = {
             <p>Sign in to your remote software account</p>
             <FaUser size={35} fill="#858d96" />
           </div>
+<<<<<<< HEAD
           <hr></hr>
           <div className="content-container">
             <div className="signin-heading">
@@ -206,6 +202,11 @@ const customStyles = {
         </Modal.Footer>
       </Modal>
     </>
+=======
+        </div>
+      </div>    
+    </div>
+>>>>>>>  Modifying the new connection module into react-bootstrap instead of html css
   );
   // render(<Example/>)
 }

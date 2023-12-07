@@ -2,13 +2,13 @@ import React from "react";
 import Sidebars from "../Header/Sidebar";
 import AllFeeds from "./AllFeeds";
 import "../Layout/MainLayout.css"
-import HeaderSearchbar from "../Header/HeaderSearchBar";
+import HeaderSearchBar from "../Header/HeaderSearchBar";
 
 const MainLayout = () => {
   return (
     <>
    <div className="header">
-        <HeaderSearchbar />
+        <HeaderSearchBar />
       </div>
       <div className="grid-container">
         <div className="sidebar">
