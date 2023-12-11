@@ -1,26 +1,8 @@
-/* HomePage.css */
-
 .home-page {
-    display: flex; /* Use flexbox for layout */
-  }
-  
-  /* Style for the left sidebar */
-  .side-bar {
-    width: 200px; /* Set the width of the sidebar according to your design */
-    background-color:#333; /* Set the background color */
-    color: white; /* Set the text color */
-  }
-  
-  /* Style for the right content
-  */ 
-  
-  /* Center the child div inside the content area */
-  /* .parent {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%; /* Make it take the full height of the content area */
-  
-  
-  
-  
+  display: flex;
+}
+.side-bar {
+  width: 200px;
+  background-color: #333;
+  color: white;
+}
