@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import "./Header/HomePage.css";
 import { LiaDesktopSolid } from "react-icons/lia";
+import { LandingPage } from "./LandingPages/LandPage";
 
 const HomePage = () => {
   return (
     <>
-      <div
+      {/* <div
         style={{
           display: "flex",
           justifyContent: "center",
@@ -42,7 +43,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <LandingPage />
     </>
   );
 };
