@@ -1,0 +1,115 @@
+.offline-modal .modal-header {
+    background: #323030 !important;
+    padding: 10px 10px !important;
+    justify-content: center !important;
+  }
+
+  .offline-modal .modal-title {
+    font-size: 14px !important;
+  }
+
+
+
+  .offline-modal  .btn-close {
+  background-color: aliceblue;
+  border-radius: 56% !important ;
+  font-size: 7px;
+}
+.offline-modal .modal-title {
+  color: #ffffff !important;
+}
+
+.offline-modal .offline-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 10px !important;
+}
+
+.offline-modal  .offline-header p {
+  margin: 0 !important;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+
+
+.offline-modal .content-container {
+  padding: 10px 10px !important; 
+
+}
+
+.offline-modal .offline-subheading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.offline-modal .offline-subheading p {
+  margin: 0 !important;
+  font-size: 13px !important;
+}
+
+.offline-modal .offline-subheading span {
+  font-size: 14px;
+}
+
+.offline-modal .fields-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 100px;
+}
+
+.offline-modal .fields-wrapper div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.offline-modal .fields-wrapper label {
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.offline-modal .fields-wrapper div input {
+  width: 90%;
+  padding-left: 5px;
+}
+
+ .bottom-headings {
+  font-size: 12px;
+  margin-bottom: 0px;
+
+ }
+ bottom-content-div{
+  margin-top: 12px;
+ }
+
+.offline-modal .offline-modal-bottom-container{
+  display: flex !important;
+  justify-content: flex-end !important;
+ }
+
+ .offline-modal  .cancel-button {
+  background-image: linear-gradient(#eeeeee, #bababa) !important;
+  padding: 2px 20px !important;
+  margin-left: 10px !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  color: #000000 !important;
+  border-color: #838383 !important;
+}
+
+.offline-modal  .next-button {
+  background: #eeeeee !important;
+  padding: 2px 24px !important;
+  margin-left: 10px !important;
+  cursor: pointer !important;
+  border-radius: 4px !important;
+  color: #838383 !important;
+  border-color: #838383 !important;
+} 
+

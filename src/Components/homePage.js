@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./Header/HomePage.css";
 import { LiaDesktopSolid } from "react-icons/lia";
 import { LandingPage } from "./LandingPages/LandPage";

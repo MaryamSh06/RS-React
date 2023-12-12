@@ -1,103 +1,61 @@
 import React, { useState } from 'react'
-import GeneralTab from '../../TabsScreens/GeneralTab'
-import Modal from "react-modal";
-import "../NewConnectionModal/Connectionstyle.css"
-const customStyles = {
-  content: {
-    top: "50%",
-    left: "50%",
-    width: "600px",
-    right: "auto",
-    height: "80vh",
-    overflowY: "auto",
-    bottom: "auto",
-    marginRight: "-50%",
-    transform: "translate(-50%, -50%)",
-    backgroundColor: "lightgrey", // Set the background color to black
-    padding: "0px", // Adjust the padding
-    borderRadius:"10px"
-  },
-  overlay: {
-    // Add overlay background color
-    // display: 'flex',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-  },
-};
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import GeneralTab from '../../TabsScreens/GeneralTab';
+import "./NewConnectionstyle.css";
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import OptionsTabScreen from '../../TabsScreens/OptionsTabScreen';
+import ExpertTabScreen from '../../TabsScreens/ExpertTabScreen';
 
-
-
-const NewConnectionModal = () => {
-    const [isOpen, setIsOpen] = useState(false);
-const [activeTab, setActiveTab] = useState("general");
-
-function openModal() {
-  setIsOpen(true);
-}
-
-function closeModal() {
-  setIsOpen(false);
-}
-
+const NewConnectionModal = ({showConnectionModal, setShowConnectionModal}) => {
+  const modalBodyStyle = {
+    height:"720px",
+    background: "#d8d8d8",
+    overflow: 'auto',
+  };
+  
+    const [activeTab, setActiveTab] = useState('general');   
+    const handleTabSelect = (tabKey) => {
+    setActiveTab(tabKey);
+  };
   return (
-   <>
+    <>
    
-   
-   
-   <div>
-        <button onClick={openModal}>Open Modal</button>
-        <Modal isOpen={isOpen} onRequestClose={closeModal} style={customStyles}>
-          <div className="modal-content">
-            <div class="modal-header">
-              <div className="header-content">
-                <p>Properties</p>
-              </div>
-              <button className="close-button" onClick={closeModal}>
-                &times;
-              </button>
-            </div>
-
-            <div className="tabs">
-              <button
-                onClick={() => setActiveTab("general")}
-                className={activeTab === "general" ? "active" : ""}
-              >
-                General
-              </button>
-              <button
-                onClick={() => setActiveTab("options")}
-                className={activeTab === "options" ? "active" : ""}
-              >
-                Options
-              </button>
-              <button
-                onClick={() => setActiveTab("expert")}
-                className={activeTab === "expert" ? "active" : ""}
-              >
-                Expert
-              </button>
-            </div>
-            <div className="tab-content">
-              {activeTab === "general" && <GeneralTab />}
-              {activeTab === "options" && (
-                <div>
-                  <p>Content for Tab 2</p>
-                </div>
-              )}
-              {activeTab === "expert" && (
-                <div>
-                  <p>Content for Tab 3</p>
-                </div>
-              )}
-            </div>
-            <div className="modal-footer">
-              <button  onClick={closeModal} className="cancel-button">Cancel</button>
-              <button className="ok-button">OK</button>
-            </div>
-          </div>
-        </Modal>
-      </div>
-   </>
+      <Modal show={showConnectionModal} onHide={()=>setShowConnectionModal(false)} animation={true}  centered className='modal-connection'>
+      <Modal.Header closeButton style={{padding:"4px"}}>
+        <Modal.Title>Properties</Modal.Title>
+      </Modal.Header>
+      <Modal.Body style={modalBodyStyle}>
+        <Tabs
+          activeKey={activeTab}
+          onSelect={handleTabSelect}
+          id="uncontrolled-tab-example"
+          // className="mb-3"
+          
+        >
+          <Tab eventKey="general" title="General"  tabClassName="custom-tab" >
+           <GeneralTab />
+          </Tab>
+          <Tab eventKey="options" title="Options"  tabClassName="custom-tab">
+          <OptionsTabScreen />
+          </Tab>
+          <Tab eventKey="expert" title="Expert"  tabClassName="custom-tab">
+          <ExpertTabScreen />
+          </Tab>
+        </Tabs>
+      </Modal.Body>
+      <Modal.Footer className='modal-bottom-container'>
+        <Button className="cancel-button" onClick={()=>setShowConnectionModal(false)}>
+          Cancel
+        </Button>
+        <Button className="ok-button">
+          OK
+        </Button>
+      </Modal.Footer>
+    </Modal>
+    </>
   )
 }
 

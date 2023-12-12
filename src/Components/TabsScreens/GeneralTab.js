@@ -26,7 +26,7 @@ const GeneralTab = () => {
             <input
               className="simple-input"
               placeholder="IP address or hostname"
-              // size={53}
+              size={42}
             />
           </div>
         </div>
@@ -39,22 +39,21 @@ const GeneralTab = () => {
               type="text"
               className="simple-input"
               placeholder="Friendly identifier"
-              // size={53}
+              size={42}
             />
           </div>
         </div>
 
-        <div className="border-container">
+        <div className="border-labels-container">
           <label className="border-label">Labels</label>
           <p className="inside-border-paragraph">
             To nest labels, separate names with a forward slash (/)
           </p>{" "}
-          <br />
           <input
             type="text"
             className="simple-input"
             placeholder="Enter a label name, or press Down to apply existing labels"
-            // size={60}
+             size={47}
           />
         </div>
 
