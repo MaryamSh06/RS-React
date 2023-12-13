@@ -3,69 +3,55 @@
   justify-content: center;
   align-items: center;
   height: 100dvh;
-  background: url(../../images/network.jpg) no-repeat fixed center;
-  background-size: cover;
+}
+
+@keyframes welcomePageAnimation {
+  from {
+    transform: translate(-50px);
+    opacity: 0%;
+  }
+  to {
+    transform: translate(0);
+    opacity: 100%;
+  }
+}
+
+.welcomeContent {
+  animation-name: welcomePageAnimation;
+  animation-duration: 300ms;
 }
 
 .innerContainer {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: right;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   min-height: 80%;
   flex-basis: 85%;
-  border-radius: 1rem;
-  background: url(../../images/outerContainer.jpg) no-repeat fixed center;
+  border-radius: 5px;
+  background: url(../../images/background.jpg) no-repeat fixed center;
   background-size: cover;
 }
 
-.navbar {
-  flex-basis: 20%;
-  width: 100%;
-  margin: auto;
-  font-family: Arial, Helvetica, sans-serif;
-  padding: 0px;
-}
-.logo {
-  flex-basis: 35%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2.5rem;
-  font-weight: 600;
-}
-.links {
-  flex-basis: 60%;
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-.linksContent {
-  color: white;
-  font-size: 18px;
-  font-weight: 500;
-}
-.linksContent:hover {
-  text-decoration: underline;
-  cursor: pointer;
-}
-.menubar:hover {
-  cursor: pointer;
-}
-.mainSection {
-  flex-basis: 80%;
+.innerContainerItem {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  flex-basis: 40%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.mainSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
-  color: white;
-  /* padding-bottom: 3rem; */
-  /* width: 50%; */
+  height: 100%;
 }
 
 .heading {
@@ -86,11 +72,11 @@
   font-size: 1rem;
 }
 
-.showModalButton {
+.connectBtn {
   border: none;
   padding: 10px 20px;
-  background-color: white;
+  background-color: rgb(42, 167, 224);
   border-radius: 30px;
-  color: rgb(42, 167, 224);
+  color: white;
   font-weight: 600;
 }
