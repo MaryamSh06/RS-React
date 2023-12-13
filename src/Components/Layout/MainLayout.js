@@ -1,22 +1,21 @@
 import React from "react";
 import Sidebars from "../Header/Sidebar";
-import AllFeeds from "./AllFeeds";
 import "../Layout/MainLayout.css"
 import HeaderMenu from "../Header/HeaderMenu";
 
-const MainLayout = () => {
+const MainLayout = ({children}) => {
   return (
     <>
-   <div className="header">
+    <div className="header">
         <HeaderMenu />
       </div>
       <div className="grid-container">
         <div className="sidebar">
           <Sidebars />
         </div> 
-      <div className="main-content">
-        <AllFeeds />
-      </div>
+        <div className="main-content">
+          {children}
+        </div>
       </div>
     </>
   );

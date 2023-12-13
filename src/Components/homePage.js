@@ -45,7 +45,8 @@ const HomePage = () => {
         </div>
       </div> */}
 
-      <LandingPage />
+      {/* <LandingPage /> */}
+     
     </>
   );
 };
