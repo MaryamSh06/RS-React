@@ -1,8 +1,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 251px 1fr; /* Sidebar takes 200px, the rest is for the main content */
-  height: 100vh;
-  /* margin-top: 25px */
+  margin-top: 44px
 }
 
 .sidebar {
@@ -14,11 +13,11 @@
   /* Add padding to the main content if needed */
 }
 
-.header {
+/* .header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fff;
-  z-index: 1000;
-}
+  background-color: #fff; 
+  z-index: 1000; 
+} */

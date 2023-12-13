@@ -1,23 +1,23 @@
 import React from "react";
 import Sidebars from "../Header/Sidebar";
 import AllFeeds from "./AllFeeds";
-import "../Layout/MainLayout.css";
-import HeaderSearchBar from "../Header/HeaderSearchBar";
+import "../Layout/MainLayout.css"
+import HeaderMenu from "../Header/HeaderMenu";
 
 const MainLayout = () => {
   return (
     <>
-      {/* <div className="header">
-        <HeaderSearchBar />
-      </div> */}
-      {/* <div className="grid-container"> */}
-      {/* <div className="sidebar">
+   <div className="header">
+        <HeaderMenu />
+      </div>
+      <div className="grid-container">
+        <div className="sidebar">
           <Sidebars />
-        </div> */}
+        </div> 
       <div className="main-content">
         <AllFeeds />
       </div>
-      {/* </div> */}
+      </div>
     </>
   );
 };
