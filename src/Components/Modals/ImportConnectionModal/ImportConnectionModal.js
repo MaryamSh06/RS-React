@@ -1,15 +1,13 @@
-import React from 'react'
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import "bootstrap/dist/css/bootstrap.min.css";
 import "./ImportModalstyle.css";
-import VncLogo from "../../../Vnc.png"
+import VncLogo from "../../../Vnc.png";
 
-const ImportConnectionModal = ({importModal,setImportModal}) => {
+const ImportConnectionModal = ({ importModal, setImportModal }) => {
   return (
-   <>
-   
-   <Modal
+    <>
+      <Modal
         show={importModal}
         onHide={() => setImportModal(false)}
         animation={true}
@@ -29,26 +27,28 @@ const ImportConnectionModal = ({importModal,setImportModal}) => {
             <div className="fields-wrapper">
               <label>Choose offline license file:</label>
               <div>
-                <input type="text"/>
+                <input type="text" />
                 <Button className="cancel-button">Browse</Button>
               </div>
             </div>
           </div>
         </div>
-    
-         <hr />
-        <Modal.Footer  className='import-modal-bottom-container'>
-            <Button className="next-button" onClick={() => setImportModal(false)}>
-              Next
-            </Button>
-            <Button className="cancel-button" onClick={() => setImportModal(false)}>
-              Cancel
-            </Button>
+
+        <hr />
+        <Modal.Footer className="import-modal-bottom-container">
+          <Button className="next-button" onClick={() => setImportModal(false)}>
+            Next
+          </Button>
+          <Button
+            className="cancel-button"
+            onClick={() => setImportModal(false)}
+          >
+            Cancel
+          </Button>
         </Modal.Footer>
       </Modal>
-   
-   </>
-  )
-}
+    </>
+  );
+};
 
-export default ImportConnectionModal
+export default ImportConnectionModal;

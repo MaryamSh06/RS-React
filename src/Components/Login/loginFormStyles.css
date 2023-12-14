@@ -1,0 +1,101 @@
+@keyframes loginAnimation {
+  from {
+    transform: translate(50px);
+    opacity: 0%;
+  }
+  to {
+    transform: translate(0);
+    opacity: 100%;
+  }
+}
+
+.loginFormContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  align-items: flex-start;
+  width: 100%;
+  height: 30rem;
+  animation-name: loginAnimation;
+  animation-duration: 300ms;
+}
+
+.backIcon {
+  cursor: pointer;
+  position: absolute;
+  left: 3%;
+  top: 2rem;
+  z-index: 1;
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 18rem;
+}
+
+.loginTitle {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0px 15px;
+}
+
+.labels {
+  align-self: flex-start;
+}
+
+.inputFeild {
+  background: none;
+  border: none;
+  width: 17rem;
+  border-bottom: 2px solid rgb(150, 150, 150);
+}
+
+.emailErrorContainer {
+  height: 1rem;
+}
+
+.passwordErrorContainer {
+  height: 3.5rem;
+}
+.errorStyle {
+  padding-top: 2px !important;
+  text-align: left;
+  font-size: 0.8rem;
+  font-style: italic;
+  line-height: 0.9rem;
+  align-self: flex-start;
+  padding-top: 0.5rem;
+  color: red;
+  width: 17rem;
+}
+.inputFeild:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(87, 87, 87);
+}
+
+.passwordContainer {
+  position: relative;
+}
+.passwordIcons {
+  position: absolute;
+  right: 0px;
+}
+
+.loginBtn {
+  border: none;
+  padding: 5px 40px;
+  background-color: rgb(42, 167, 224);
+  border-radius: 30px;
+  color: white;
+  font-weight: 600;
+}
