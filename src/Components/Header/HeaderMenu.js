@@ -14,8 +14,16 @@ const HeaderMenu = () => {
 
   return (
     <>
-      <Navbar bg="secondary" expand="lg" fixed="top">
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar
+        // bg="secondary"
+        expand="lg"
+        fixed="top"
+        style={{ backgroundColor: "#2AA7E0" }}
+      >
+        <Navbar.Toggle
+          aria-controls="basic-navbar-nav"
+          style={{ color: "white !important", marginLeft: "20px" }}
+        />
         <Navbar.Collapse
           id="basic-navbar-nav"
           className="justify-content-between"
@@ -25,12 +33,19 @@ const HeaderMenu = () => {
               <Dropdown.Toggle
                 as={Nav.Link}
                 id="file-dropdown"
-                style={{ color: "white", fontSize: "14px" }}
+                style={{
+                  color: "white",
+                  fontSize: "14px",
+                }}
               >
                 File
               </Dropdown.Toggle>
               <Dropdown.Menu
-                style={{ fontSize: "13px", background: "#d8d8d8" }}
+                style={{
+                  fontSize: "13px",
+                  // background: "#d8d8d8",
+                  backgroundColor: "white",
+                }}
               >
                 <Dropdown.Item onClick={() => setShowConnectionModal(true)}>
                   New connection
@@ -63,7 +78,11 @@ const HeaderMenu = () => {
                 View
               </Dropdown.Toggle>
               <Dropdown.Menu
-                style={{ fontSize: "13px", background: "#d8d8d8" }}
+                style={{
+                  fontSize: "13px",
+                  // background: "#d8d8d8",
+                  backgroundColor: "white",
+                }}
               >
                 <Dropdown.Item>Icons</Dropdown.Item>
                 <Dropdown.Item>Details</Dropdown.Item>
@@ -84,7 +103,11 @@ const HeaderMenu = () => {
                 Help
               </Dropdown.Toggle>
               <Dropdown.Menu
-                style={{ fontSize: "13px", background: "#d8d8d8" }}
+                style={{
+                  fontSize: "13px",
+                  // background: "#d8d8d8",
+                  backgroundColor: "white",
+                }}
               >
                 <Dropdown.Item>Real VNC on web</Dropdown.Item>
                 <Dropdown.Item>Technical support</Dropdown.Item>

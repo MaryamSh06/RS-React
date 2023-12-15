@@ -25,7 +25,7 @@ const PreferencesModal = ({ openPreferences, setOpenPreferences }) => {
         <Modal.Header closeButton className="preference-header">
           <Modal.Title>Application Preferences</Modal.Title>
         </Modal.Header>
-        <Modal.Body>
+        <Modal.Body style={{ backgroundColor: "white" }}>
           <Tab.Container id="left-tabs-example" defaultActiveKey="privacy">
             <Row style={{ height: "60vh" }}>
               <Col sm={3} style={{ background: "white" }}>
@@ -55,7 +55,10 @@ const PreferencesModal = ({ openPreferences, setOpenPreferences }) => {
                   </Nav.Item>
                 </Nav>
               </Col>
-              <Col sm={9} style={{ border: "1px solid #a5a5a5" }}>
+              <Col
+                sm={9}
+                style={{ border: "1px solid #cccccc", borderLeft: "none" }}
+              >
                 <Tab.Content>
                   <Tab.Pane className="custom-tab-content" eventKey="privacy">
                     <PrivacyScreen />

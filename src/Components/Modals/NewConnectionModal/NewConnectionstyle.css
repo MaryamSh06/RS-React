@@ -75,43 +75,45 @@
   }
    */
 
+.modal-connection .btn-close {
+  background-color: aliceblue;
+  border-radius: 56% !important ;
+  font-size: 8px;
+}
+.modal-connection .modal-bottom-container {
+  display: flex !important;
+  justify-content: flex-end !important;
+  padding-right: 30px !important;
+  padding-bottom: 10px !important;
+  background-color: transparent !important;
+}
 
+.modal-connection .cancel-button {
+  background-color: #2aa7e0 !important;
+  border: none;
+  color: white !important;
+  padding: 7px 15px !important;
+  margin-left: 10px !important;
+  border-radius: 4px !important;
+  cursor: pointer !important;
+  font-size: 15px !important;
+}
 
+.modal-connection .cancel-button:hover {
+  background-color: #197caa !important;
+}
 
-   .modal-connection   .btn-close {
-    /* background-color: #e95420 ; */
-    background-color: aliceblue;
-    border-radius: 56% !important ;
-    font-size: 8px;
+.modal-connection .ok-button {
+  background-color: #91c6df !important;
+  border: none;
+  color: white !important;
+  padding: 7px 15px !important;
+  margin-left: 10px !important;
+  cursor: default !important;
+  border-radius: 4px !important;
+}
 
-   }
-   .modal-connection .modal-bottom-container{
-    display: flex !important;
-    justify-content: flex-end !important;
-    padding-right: 30px !important;
-   }
-  
-   .modal-connection  .cancel-button {
-    background-image: linear-gradient(#eeeeee, #bababa) !important;
-    padding: 2px 20px !important;
-    margin-left: 10px !important;
-    border-radius: 4px !important;
-    cursor: pointer !important;
-    color: #000000 !important;
-    border-color: #838383 !important;
-  }
-  
-  .modal-connection  .ok-button {
-    background: #eeeeee !important;
-    padding: 2px 24px !important;
-    margin-left: 10px !important;
-    cursor: pointer !important;
-    border-radius: 4px !important;
-    color: #838383 !important;
-    border-color: #838383 !important;
-  } 
-
-  /* .nav-link.active {
+/* .nav-link.active {
     background-color: red !important;
   }
   
@@ -120,19 +122,14 @@
     color: #495057 !important;
   } */
 
+.modal-connection .nav-tabs .nav-link.active {
+  color: white;
+  background-color: #2aa7e0;
+}
+.modal-connection .nav-link {
+  color: #000;
+  padding: "2px 2px";
+  font-size: 12px;
 
-  .modal-connection .nav-tabs .nav-link.active {
-    color:#000000;
-   
-    /* background-color: #dedede; */
-
-
-  }
-  .modal-connection .nav-link {
-    color: #000000;
-    padding: '2px 2px';
-    font-size: 12px;
-
-    background-color: #bababa;
-    /* background: linear-gradient(#eeeeee, #bababa) ; */
-  } 
+  background-color: #dedede;
+}
