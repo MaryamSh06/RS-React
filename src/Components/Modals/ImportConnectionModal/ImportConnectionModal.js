@@ -14,9 +14,13 @@ const ImportConnectionModal = ({ importModal, setImportModal }) => {
         centered
         className="import-modal"
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Import Connections</Modal.Title>
-        </Modal.Header>
+        <div>
+          <Modal.Header closeButton className="modal-head">
+            <Modal.Title className="modal-head-title">
+              Import Connections
+            </Modal.Title>
+          </Modal.Header>
+        </div>
         <div className="import-header">
           <p
             style={{ margin: "8px 0px", fontSize: "15px", fontWeight: "bold" }}

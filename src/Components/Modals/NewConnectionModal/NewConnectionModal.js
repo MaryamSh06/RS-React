@@ -30,9 +30,12 @@ const NewConnectionModal = ({
         centered
         className="modal-connection"
       >
-        <Modal.Header closeButton style={{ padding: "4px" }}>
-          <Modal.Title>Properties</Modal.Title>
-        </Modal.Header>
+        <div className="modal-head">
+          <Modal.Header closeButton style={{ padding: "4px", border: "none" }}>
+            <Modal.Title className="modal-head-title">Properties</Modal.Title>
+          </Modal.Header>
+        </div>
+
         <Modal.Body style={modalBodyStyle}>
           <Tabs
             activeKey={activeTab}
