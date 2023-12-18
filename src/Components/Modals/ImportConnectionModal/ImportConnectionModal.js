@@ -18,7 +18,11 @@ const ImportConnectionModal = ({ importModal, setImportModal }) => {
           <Modal.Title>Import Connections</Modal.Title>
         </Modal.Header>
         <div className="import-header">
-          <p>Choose import directory</p>
+          <p
+            style={{ margin: "8px 0px", fontSize: "15px", fontWeight: "bold" }}
+          >
+            Choose import directory
+          </p>
           <img src={VncLogo} alt="logo" width={40} height={40} />
         </div>
         <hr></hr>

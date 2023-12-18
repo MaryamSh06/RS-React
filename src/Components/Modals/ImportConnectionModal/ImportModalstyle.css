@@ -46,6 +46,7 @@
 
 .import-modal .fields-wrapper label {
   font-size: 13px;
+  font-weight: bold;
 }
 
 .import-modal .fields-wrapper div input {

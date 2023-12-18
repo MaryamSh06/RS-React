@@ -19,7 +19,7 @@
 .label-input-dropdown label {
   font-size: 12px;
   color: #555;
-  font-weight: 400;
+  font-weight: bold;
 }
 /* .simple-input {
   border: 0.5px solid #ccc; 
@@ -39,8 +39,8 @@
 
 .label-input-class label {
   font-size: 12px;
-  font-weight: normal;
-  columns: #555 !important;
+  font-weight: bold;
+  /* columns: #555 !important; */
 }
 
 .border-container {
@@ -157,7 +157,7 @@ select::-ms-expand {
 
 .label-input-dropdown-value label {
   font-size: 12px;
-  font-weight: 400;
+  font-weight: bold;
   width: 55px;
 
   display: flex;
