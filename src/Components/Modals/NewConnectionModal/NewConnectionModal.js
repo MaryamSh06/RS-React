@@ -13,8 +13,7 @@ const NewConnectionModal = ({
   setShowConnectionModal,
 }) => {
   const modalBodyStyle = {
-    height: "83vh",
-    background: "#d8d8d8",
+    height: "42rem",
     overflow: "auto",
   };
 
@@ -39,7 +38,6 @@ const NewConnectionModal = ({
             activeKey={activeTab}
             onSelect={handleTabSelect}
             id="uncontrolled-tab-example"
-            // className="mb-3"
           >
             <Tab eventKey="general" title="General" tabClassName="custom-tab">
               <GeneralTab />

@@ -1,15 +1,15 @@
 .modal-header {
-    background: #323030 !important;
-    padding: 5px 12px !important;
-    justify-content: center !important;
-  }
+  background: #2aa7e0 !important;
+  padding: 5px 12px !important;
+  justify-content: center !important;
+}
 
-  .modal-title {
-    font-size: 16px !important;
-  }
+.modal-title {
+  font-size: 16px !important;
+}
 
-  .modal-header .btn-close {
-    position: absolute;
+.modal-header .btn-close {
+  position: absolute;
 }
 
 .modal-title {
@@ -30,15 +30,8 @@
   font-weight: 500;
 }
 
-hr {
-  margin: 0 !important;
-  border-color: #323030 !important;
-  opacity: 1.25;
-}
-
 .content-container {
   padding: 15px 25px;
-  background: #d8d8d8 !important;
 }
 
 .signin-heading {
@@ -107,7 +100,6 @@ hr {
 
 .modal-footer {
   justify-content: space-between !important;
-  background: #d8d8d8 !important;
   border: none !important;
   padding: 5px 21px !important;
 }

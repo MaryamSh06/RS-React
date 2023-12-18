@@ -1,31 +1,27 @@
-import React from 'react'
+import React from "react";
 import "./Preferencesstyle.css";
 
 const ProxyScreen = () => {
   return (
-   <>
-   <div className='proxy-screen'>
-    <div className="proxy-radio-container">
-            <input type="radio" className="proxy-custom-radio" />
-            <label className="proxy-label-text">
+    <>
+      <div className="proxy-screen">
+        <div className="proxy-radio-container">
+          <input type="radio" className="proxy-custom-radio" />
+          <label className="proxy-label-text">
             Allow VNC Viewer to close while keeping current connection open
-            </label>
-          </div>
-          <div className="proxy-radio-container">
-            <input type="radio" className="proxy-custom-radio" />
-            <label className="proxy-label-text">
-            Do not use proxy
-            </label>
-          </div>
-          <div className="proxy-radio-container">
-            <input type="radio" className="proxy-custom-radio" />
-            <label className="proxy-label-text">
-            Use these proxy settings
-            </label>
-          </div>
+          </label>
+        </div>
+        <div className="proxy-radio-container">
+          <input type="radio" className="proxy-custom-radio" />
+          <label className="proxy-label-text">Do not use proxy</label>
+        </div>
+        <div className="proxy-radio-container">
+          <input type="radio" className="proxy-custom-radio" />
+          <label className="proxy-label-text">Use these proxy settings</label>
+        </div>
 
-          <div className="label-input-class">
-          <div>
+        <div className="label-input-class">
+          <div style={{ width: "4rem" }}>
             <label>Server: </label>
           </div>
           <div className="form-group">
@@ -38,24 +34,23 @@ const ProxyScreen = () => {
         </div>
 
         <div className="label-input-dropdown">
-            <div>
-              <label>Type: </label>
-            </div>
-            <div className="form-group">
-              <div className="select">
-                <select name="format" id="format" disabled>
-                
-                  <option value="http">HTTP CONNECT</option>
-                  <option value="maximum">Always maximum</option>
-                  <option value="alwayson">Always on</option>
-                  <option value="preferon">Prefer on</option>
-                  <option value="preferoff">Prefer off</option>
-                </select>
-              </div>
+          <div style={{ width: "4rem" }}>
+            <label>Type: </label>
+          </div>
+          <div className="form-group">
+            <div className="select">
+              <select name="format" id="format" disabled>
+                <option value="http">HTTP CONNECT</option>
+                <option value="maximum">Always maximum</option>
+                <option value="alwayson">Always on</option>
+                <option value="preferon">Prefer on</option>
+                <option value="preferoff">Prefer off</option>
+              </select>
             </div>
           </div>
+        </div>
         <div className="label-input-class">
-          <div>
+          <div style={{ width: "4rem" }}>
             <label>User name: </label>
           </div>
           <div className="form-group">
@@ -67,7 +62,7 @@ const ProxyScreen = () => {
           </div>
         </div>
         <div className="label-input-class">
-          <div>
+          <div style={{ width: "4rem" }}>
             <label>Password: </label>
           </div>
           <div className="form-group">
@@ -78,9 +73,9 @@ const ProxyScreen = () => {
             />
           </div>
         </div>
-        </div>
-   </>
-  )
-}
+      </div>
+    </>
+  );
+};
 
-export default ProxyScreen
+export default ProxyScreen;

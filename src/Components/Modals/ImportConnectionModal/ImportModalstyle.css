@@ -1,17 +1,14 @@
-
 .import-modal .modal-header {
-    background: #323030 !important;
-    padding: 10px 10px !important;
-    justify-content: center !important;
-  }
+  background: #2aa7e0 !important;
+  padding: 10px 10px !important;
+  justify-content: center !important;
+}
 
-  .import-modal .modal-title {
-    font-size: 14px !important;
-  }
+.import-modal .modal-title {
+  font-size: 14px !important;
+}
 
-
-
-  .import-modal  .btn-close {
+.import-modal .btn-close {
   background-color: aliceblue;
   border-radius: 56% !important ;
   font-size: 7px;
@@ -29,13 +26,10 @@
 }
 
 .import-modal .content-container {
-  padding: 10px 10px !important; 
+  background-color: white !important;
+  padding: 10px 10px !important;
   height: 40vh;
-
 }
-
-
-
 
 .import .fields-wrapper {
   display: flex;
@@ -52,38 +46,37 @@
 
 .import-modal .fields-wrapper label {
   font-size: 13px;
+  font-weight: bold;
 }
 
 .import-modal .fields-wrapper div input {
   width: 90%;
-  padding-left: 5px;
+  padding: 0.25rem !important;
 }
 
-
-
-.import-modal .import-modal-bottom-container{
+.import-modal .import-modal-bottom-container {
   display: flex !important;
   justify-content: flex-end !important;
- }
-
- .import-modal  .cancel-button {
-  background-image: linear-gradient(#eeeeee, #bababa) !important;
-  padding: 2px 20px !important;
-  margin-left: 10px !important;
-  border-radius: 4px !important;
-  cursor: pointer !important;
-  color: #000000 !important;
-  border-color: #838383 !important;
 }
 
-.import-modal  .next-button {
-  background: #eeeeee !important;
-  padding: 2px 24px !important;
+.import-modal .cancel-button {
+  background-color: #2aa7e0 !important;
+  border: none;
+  color: white !important;
+  padding: 7px 15px !important;
   margin-left: 10px !important;
   border-radius: 4px !important;
   cursor: pointer !important;
-  border-radius: 4px !important;
-  color: #838383 !important;
-  border-color: #838383 !important;
-} 
+}
 
+.import-modal .next-button {
+  background-color: #91c6df !important;
+  border: none;
+  color: white !important;
+  padding: 7px 15px !important;
+  margin-left: 10px !important;
+  border-radius: 4px !important;
+  cursor: default !important;
+  border-radius: 4px !important;
+  border-color: #838383 !important;
+}
