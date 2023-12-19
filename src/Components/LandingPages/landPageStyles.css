@@ -1,9 +1,9 @@
-.outerContainer {
+/* .outerContainer {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100dvh;
-}
+} */
 
 @keyframes welcomePageAnimation {
   from {
@@ -26,9 +26,9 @@
   justify-content: right;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px,
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
-  min-height: 80%;
-  flex-basis: 85%;
-  border-radius: 5px;
+  height: 100dvh;
+  /* height: 85%; */
+  /* flex-basis: 80%; */
   background: url(../../images/background.jpg) no-repeat fixed center;
   background-size: cover;
 }
