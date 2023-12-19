@@ -13,9 +13,13 @@ const OfflineLicenseModal = ({ show, setShow }) => {
         centered
         className="offline-modal"
       >
-        <Modal.Header closeButton>
-          <Modal.Title>Apply Offline License</Modal.Title>
-        </Modal.Header>
+        <div className="modal-head">
+          <Modal.Header closeButton style={{ padding: "4px", border: "none" }}>
+            <Modal.Title className="modal-head-title">
+              Apply Offline License
+            </Modal.Title>
+          </Modal.Header>
+        </div>
         <div className="offline-header">
           <p>Apply an offline license to VNC viewer</p>
           <img src={VncLogo} alt="logo" width={40} height={40} />

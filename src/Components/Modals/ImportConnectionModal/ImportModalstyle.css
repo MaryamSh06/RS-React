@@ -1,4 +1,4 @@
-.import-modal .modal-header {
+/* .import-modal .modal-header {
   background: #2aa7e0 !important;
   padding: 10px 10px !important;
   justify-content: center !important;
@@ -6,13 +6,40 @@
 
 .import-modal .modal-title {
   font-size: 14px !important;
+} */
+
+.import-modal .modal-head {
+  background: #2aa7e0 !important;
+  display: flex !important;
+  justify-content: space-around !important;
+  align-items: center !important;
+  position: relative;
+  padding: 8px;
+
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
+  border: none !important;
+}
+
+.import-modal .modal-head .modal-head-title {
+  font-size: 15px;
+  color: white;
 }
 
 .import-modal .btn-close {
   background-color: aliceblue;
   border-radius: 56% !important ;
-  font-size: 7px;
+  font-size: 8px;
+  /* margin-right: 0.3rem; */
+  position: absolute;
+  /* padding-right: 10px; */
 }
+
+/* .import-modal .btn-close {
+  background-color: aliceblue;
+  border-radius: 56% !important ;
+  font-size: 7px;
+} */
 .import-modal .modal-title {
   color: #ffffff !important;
 }

@@ -22,9 +22,17 @@ const PreferencesModal = ({ openPreferences, setOpenPreferences }) => {
         centered
         dialogClassName="preference-modal"
       >
-        <Modal.Header closeButton className="preference-header">
-          <Modal.Title>Application Preferences</Modal.Title>
-        </Modal.Header>
+        <div className="modal-head">
+          <Modal.Header
+            closeButton
+            className="preference-header"
+            style={{ padding: "4px", border: "none" }}
+          >
+            <Modal.Title className="modal-head-title">
+              Application Preferences
+            </Modal.Title>
+          </Modal.Header>
+        </div>
         <Modal.Body style={{ backgroundColor: "white" }}>
           <Tab.Container id="left-tabs-example" defaultActiveKey="privacy">
             <Row style={{ height: "60vh" }}>
