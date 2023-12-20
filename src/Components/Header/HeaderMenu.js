@@ -1,20 +1,33 @@
 import React, { useState } from "react";
-import { Navbar, Nav, Button, Dropdown } from "react-bootstrap";
+import { Navbar, Nav,  Dropdown } from "react-bootstrap";
 import NewConnectionModal from "../Modals/NewConnectionModal/NewConnectionModal";
-import SigninModal from "../Modals/SigninModal.js/SigninModal";
 import OfflineLicenseModal from "../Modals/offlineLicenseModal/OfflineLicenseModal";
 import ImportConnectionModal from "../Modals/ImportConnectionModal/ImportConnectionModal";
 import PreferencesModal from "../Modals/PreferencesModal/PreferencesModal";
+
 const HeaderMenu = () => {
-  const [show, setShow] = useState(false);
   const [showConnectionModal, setShowConnectionModal] = useState(false);
   const [offlineModal, setOfflineModal] = useState(false);
   const [importModal, setImportModal] = useState(false);
   const [openPreferences, setOpenPreferences] = useState(false);
 
+  // useEffect(() => {
+  //   ipcRenderer.on('open-modal', showConnectionModal);
+
+  //   return () => {
+  //     ipcRenderer.removeAllListeners('open-modal');
+  //   };
+  // }, []); 
+
+
+
+
+
+
+
   return (
     <>
-      <Navbar
+      {/* <Navbar
         // bg="secondary"
         expand="lg"
         fixed="top"
@@ -118,7 +131,7 @@ const HeaderMenu = () => {
             </Dropdown>
           </Nav>
         </Navbar.Collapse>
-      </Navbar>
+      </Navbar> */}
 
       <NewConnectionModal
         showConnectionModal={showConnectionModal}

@@ -1,10 +1,19 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./ImportModalstyle.css";
 import VncLogo from "../../../Vnc.png";
 
 const ImportConnectionModal = ({ importModal, setImportModal }) => {
+
+
+  useEffect(() => {
+    window?.ipcRendererApi?.openImportModal('open-import-modal', () => {setImportModal(true);});
+
+    return () => {
+      window?.ipcRendererApi?.removeEventListener("modal-opened");
+    }
+  }, []);
   return (
     <>
       <Modal

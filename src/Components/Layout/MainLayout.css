@@ -1,7 +1,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: 251px 1fr; /* Sidebar takes 200px, the rest is for the main content */
-  margin-top: 44px
+  /* margin-top: 44px */
 }
 
 .sidebar {

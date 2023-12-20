@@ -1,9 +1,18 @@
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import React from "react";
+import React, { useEffect } from "react";
 import "./OfflineLicensestyle.css";
 import VncLogo from "../../../Vnc.png";
 const OfflineLicenseModal = ({ show, setShow }) => {
+
+
+  useEffect(() => {
+    window?.ipcRendererApi?.openOfflineModal('open-offline-modal', () => {setShow(true);});
+
+    return () => {
+      window?.ipcRendererApi?.removeEventListener("modal-opened");
+    }
+  }, []);
   return (
     <>
       <Modal
