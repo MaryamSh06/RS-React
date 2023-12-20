@@ -1,0 +1,30 @@
+.flexContainer {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.containerItem {
+  flex-basis: 8.5%;
+  margin: 0.5rem;
+  text-align: center;
+}
+
+.screenContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0.5rem;
+  height: 4.5rem;
+}
+
+.imageStyle {
+  width: 100%;
+  object-fit: contain;
+  aspect-ratio: 16/9;
+}
+
+.screenIDStyle {
+  margin-top: 0.5rem;
+  font-size: 11px;
+  margin-bottom: none;
+}
