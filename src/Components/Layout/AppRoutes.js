@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import HomePage from "../homePage";
 import { LandingPage } from "../LandingPages/LandPage";
 import MainLayout from "./MainLayout";
 
@@ -9,8 +8,7 @@ const AppRoutes = () => {
     <>
        <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/home" element={<MainLayout />}>
-      </Route>
+      <Route path="/home" element={<MainLayout />} />
     </Routes>
     </>
   );

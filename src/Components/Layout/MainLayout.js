@@ -2,6 +2,7 @@ import React from "react";
 import Sidebars from "../Header/Sidebar";
 import "../Layout/MainLayout.css"
 import HeaderMenu from "../Header/HeaderMenu";
+import HomePage from "../homePage";
 
 const MainLayout = ({children}) => {
   return (
@@ -14,7 +15,7 @@ const MainLayout = ({children}) => {
           <Sidebars />
         </div> 
         <div className="main-content">
-          {children}
+         <HomePage />
         </div>
       </div>
     </>

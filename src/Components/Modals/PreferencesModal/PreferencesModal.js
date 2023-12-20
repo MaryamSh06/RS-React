@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import Tab from "react-bootstrap/Tab";
@@ -13,6 +13,14 @@ import RecordingScreen from "./RecordingScreen";
 import TroubleShootingScreen from "./TroubleShootingScreen";
 
 const PreferencesModal = ({ openPreferences, setOpenPreferences }) => {
+
+  useEffect(() => {
+    window?.ipcRendererApi?.openOfflineModal('open-preferences-modal', () => {setOpenPreferences(true);});
+
+    return () => {
+      window?.ipcRendererApi?.removeEventListener("modal-opened");
+    }
+  }, []);
   return (
     <>
       <Modal

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {  useEffect, useState } from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import GeneralTab from "../../TabsScreens/GeneralTab";
@@ -16,11 +16,20 @@ const NewConnectionModal = ({
     height: "42rem",
     overflow: "auto",
   };
-
   const [activeTab, setActiveTab] = useState("general");
   const handleTabSelect = (tabKey) => {
     setActiveTab(tabKey);
+
   };
+
+  useEffect(() => {
+    window?.ipcRendererApi?.openModal('open-connection-modal', () => {setShowConnectionModal(true);});
+
+    return () => {
+      window?.ipcRendererApi?.removeEventListener("modal-opened");
+    }
+  }, []);
+
   return (
     <>
       <Modal

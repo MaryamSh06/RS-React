@@ -1,17 +1,16 @@
 import React from "react";
 import "./Header/HomePage.css";
 import { LiaDesktopSolid } from "react-icons/lia";
-import { LandingPage } from "./LandingPages/LandPage";
 
 const HomePage = () => {
   return (
     <>
-      {/* <div
+      <div
         style={{
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-          height: "100vh",
+          height: "80vh",
         }}
       >
         <div
@@ -43,10 +42,7 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div> */}
-
-      {/* <LandingPage /> */}
-     
+      </div> 
     </>
   );
 };
