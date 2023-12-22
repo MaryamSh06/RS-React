@@ -2,6 +2,7 @@ import React from "react";
 import "./landPageStyles.css";
 import { useState } from "react";
 import { LoginForm } from "../Login/LoginForm";
+
 export const LandingPage = () => {
   const [connectClicked, setConnect] = useState(false);
 
