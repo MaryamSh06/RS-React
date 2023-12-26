@@ -3,6 +3,7 @@ import "./loginFormStyles.css";
 import backIcon from "../../images/icons8-back-24.png";
 import showPasswordIcon from "../../images/icons8-show-password-20.png";
 import hidePasswordIcon from "../../images/icons8-hide-password-20.png";
+import { Loader } from "../loader/Loader";
 import { useNavigate } from "react-router-dom";
 
 export const LoginForm = ({ setConnect, connect }) => {
@@ -15,6 +16,7 @@ export const LoginForm = ({ setConnect, connect }) => {
   const [formErrors, setFormErrors] = useState({ email: "", password: "" });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e?.target;
@@ -61,82 +63,112 @@ export const LoginForm = ({ setConnect, connect }) => {
 
   useEffect(() => {
     if (Object?.keys(formErrors).length === 0 && !!isSubmitted) {
-      navigate("/home");
+      setIsLoading(true);
+      setTimeout(() => {
+        navigate("/home");
+      }, 2000);
     }
   }, [handleSubmit]);
 
   return (
     <>
-      <form autoComplete="off" onSubmit={handleSubmit}>
-        <div className="loginFormContainer">
-          <img
-            src={backIcon}
-            className="backIcon"
-            onClick={() => {
-              setConnect(!connect);
-            }}
-          />
+      {isLoading ? (
+        <Loader />
+      ) : (
+        <form autoComplete="off" onSubmit={handleSubmit}>
+          <div className="loginFormContainer">
+            <img
+              src={backIcon}
+              className="backIcon"
+              onClick={() => {
+                setConnect(!connect);
+              }}
+            />
 
-          <div className="formContainer">
-            <h1 className="loginTitle">Log In</h1>
-            <div className="inputContainer">
-              <label htmlFor="email" className="labels">
-                Email
-              </label>
-              <input
-                placeholder="e.g. user@example.com"
-                name="email"
-                id="email"
-                onChange={handleChange}
-                className="inputFeild"
-              />
-              <div className="emailErrorContainer">
-                {formErrors?.email && (
-                  <p className="errorStyle">{formErrors?.email}</p>
-                )}
-              </div>
-            </div>
-            <div className="inputContainer">
-              <label htmlFor="password" className="labels">
-                Password
-              </label>
-              <div className="passwordContainer">
+            <div className="formContainer">
+              <h1 className="loginTitle">Log In</h1>
+              <div className="inputContainer">
+                <label htmlFor="email" className="labels">
+                  Email
+                </label>
                 <input
-                  placeholder="e.g. ********"
-                  type={!!visiblePassword ? "text" : "password"}
-                  name="password"
-                  id="password"
+                  placeholder="e.g. user@example.com"
+                  name="email"
+                  id="email"
+                  autoFocus
+                  onFocus={() => {
+                    setFormErrors((values) => ({ ...values, email: "" }));
+                  }}
+                  onBlur={() => {
+                    if (!loginCridentials?.email) {
+                      setFormErrors((values) => ({
+                        ...values,
+                        email: "Email is required!",
+                      }));
+                    }
+                  }}
                   onChange={handleChange}
                   className="inputFeild"
                 />
-                {!!visiblePassword ? (
-                  <img
-                    src={showPasswordIcon}
-                    className="passwordIcons"
-                    onClick={() => {
-                      setVisiblePassword(!visiblePassword);
+                <div className="emailErrorContainer">
+                  {formErrors?.email && (
+                    <p className="errorStyle">{formErrors?.email}</p>
+                  )}
+                </div>
+              </div>
+              <div className="inputContainer">
+                <label htmlFor="password" className="labels">
+                  Password
+                </label>
+                <div className="passwordContainer">
+                  <input
+                    placeholder="e.g. ********"
+                    type={!!visiblePassword ? "text" : "password"}
+                    name="password"
+                    id="password"
+                    onChange={handleChange}
+                    className="inputFeild"
+                    onFocus={() => {
+                      setFormErrors((values) => ({ ...values, password: "" }));
+                    }}
+                    onBlur={() => {
+                      if (!loginCridentials?.password) {
+                        setFormErrors((values) => ({
+                          ...values,
+                          password: "Password is required!",
+                        }));
+                      }
                     }}
                   />
-                ) : (
-                  <img
-                    src={hidePasswordIcon}
-                    className="passwordIcons"
-                    onClick={() => {
-                      setVisiblePassword(!visiblePassword);
-                    }}
-                  />
-                )}
+                  {!!visiblePassword ? (
+                    <img
+                      src={showPasswordIcon}
+                      className="passwordIcons"
+                      onClick={() => {
+                        setVisiblePassword(!visiblePassword);
+                      }}
+                    />
+                  ) : (
+                    <img
+                      src={hidePasswordIcon}
+                      className="passwordIcons"
+                      onClick={() => {
+                        setVisiblePassword(!visiblePassword);
+                      }}
+                    />
+                  )}
+                </div>
+                <div className="passwordErrorContainer">
+                  {formErrors?.password && (
+                    <p className="errorStyle">{formErrors?.password}</p>
+                  )}
+                </div>
               </div>
-              <div className="passwordErrorContainer">
-                {formErrors?.password && (
-                  <p className="errorStyle">{formErrors?.password}</p>
-                )}
-              </div>
+              <input className="loginBtn" type="submit" value="Log In" />
             </div>
-            <input className="loginBtn" type="submit" value="Log In" />
           </div>
-        </div>
-      </form>
+        </form>
+      )}
     </>
   );
 };
